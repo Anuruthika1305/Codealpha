@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Inline styles for demonstration; consider using an external stylesheet for larger projects */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="date"] {
+            width: calc(100% - 10px);
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #currentAge {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <h1>Age Calculator</h1>
+        </header>
+
+        <form id="ageCalculatorForm">
+            <div>
+                <label for="inputDob">Date of Birth:</label>
+                <input id="inputDob" type="date" value="2000-01-01" />
+            </div>
+
+            <div>
+                <label for="cdate">Current Date:</label>
+                <input id="cdate" type="date" />
+            </div>
+
+            <button type="button" onclick="calculateAge()">Calculate Age</button>
+        </form>
+
+        <div id="currentAge"></div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
